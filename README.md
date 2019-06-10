@@ -1,3 +1,5 @@
+Open [https://viraingarg.github.io/react_redux_user/](https://viraingarg.github.io/react_redux_user/) to visit published site.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
