@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Users from "./components/Users";
 
-function App() {
+function App(props) {
+  function redirectToCreateUser(e) {
+    e.preventDefault();
+    props.history.push("/addUser");
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header">
+        <span>React Redux User CRUD Operations</span>
+      </div>
+      <div className="body">
+        <div>
+          <span>All Users</span>
+          <button onClick={redirectToCreateUser}>
+            Create Users <i className="fas fa-angle-right" />
+          </button>
+        </div>
+        <Users />
+      </div>
     </div>
   );
 }
